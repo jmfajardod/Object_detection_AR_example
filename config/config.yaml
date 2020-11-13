@@ -1,0 +1,3 @@
+#cam_topic: "image_raw/compressed"
+cam_topic: "/raspicam_node/image/compressed"
+encoding: "bgr8"

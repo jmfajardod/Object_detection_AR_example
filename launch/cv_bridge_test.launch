@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    
+    
+    <node pkg="uvc_camera" type="uvc_camera_node" name="uvc_cam" />
+    
+
+    <node pkg="cv_object_id" type="object_detection.py" name="ob_detect" output="screen">
+        <rosparam command="load" file="$(find cv_object_id)/config/config.yaml" />
+        <param name="img_object" value="$(find cv_object_id)/imgs/lunar_sticker_big.png"/>
+        <param name="img_goal" value="$(find cv_object_id)/imgs/goal.jpg"/>
+    </node>
+
+</launch>
